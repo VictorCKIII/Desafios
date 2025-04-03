@@ -60,7 +60,7 @@ export default {
         const rawData = await response.json();
         console.log('Dados recebidos:', rawData);
         
-        // Atualiza os resultados diretamente no array 'results'
+       
         this.results = Array.isArray(rawData) 
           ? rawData.map(item => ({
               Razao_Social: item.Razao_Social || 'Não informado',

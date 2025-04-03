@@ -29,10 +29,10 @@ def buscar():
             df['Nome_Fantasia'].str.lower().str.contains(termo, na=False)
         ]
         
-        # Substitui NaN por None (que vira null no JSON)
+       
         resultados = resultados.where(pd.notnull(df), None)
         
-        # Converte para dicionário garantindo tratamento adequado
+        
         return jsonify(resultados.to_dict(orient='records'))
         
     except Exception as e:
